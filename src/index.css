@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=JetBrains+Mono:wght@400;500;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    letter-spacing: -0.011em;
+    line-height: 1.6;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11", "ss01";
+    color: #111827; /* Rich Slate Dark/Carbon-900 baseline */
+  }
+
+  code, pre, .font-mono {
+    font-feature-settings: "liga" on, "calt" on;
+    letter-spacing: -0.02em;
+  }
+
+  /* Form controls input protection - always high visibility dark charcoal text */
+  input, textarea, select {
+    color: #0f172a !important;
+  }
+
+  /* --- Sitewide Color Readability Enhancements --- */
+  /* Target light-to-neutral grey, stone, zinc and slate text to make them darker and more readable */
+  .text-neutral-500, .text-stone-500, .text-gray-500, .text-zinc-500, .text-slate-500 {
+    color: #374151 !important; /* Deep Slate/Charcoal - Gray 700 */
+  }
+  .text-neutral-400, .text-stone-400, .text-gray-400, .text-zinc-400, .text-slate-400 {
+    color: #4b5563 !important; /* Visible Gray 600 */
+  }
+  .text-neutral-300, .text-stone-300, .text-gray-300, .text-zinc-300, .text-slate-300 {
+    color: #6b7280 !important; /* Readable Gray 500 */
+  }
+
+  /* Ensure dark-background modules retain their high contrast light/grey styling */
+  .bg-neutral-900 .text-neutral-500, .bg-neutral-900 .text-stone-500, .bg-neutral-900 .text-gray-500, .bg-neutral-900 .text-zinc-500,
+  .bg-neutral-950 .text-neutral-500, .bg-neutral-950 .text-stone-500, .bg-neutral-950 .text-gray-500, .bg-neutral-950 .text-zinc-500,
+  .bg-stone-900 .text-neutral-500, .bg-stone-900 .text-stone-500, .bg-stone-900 .text-gray-500, .bg-stone-950 .text-stone-500,
+  .bg-black .text-neutral-500, .bg-black .text-stone-500, .bg-black .text-gray-500 {
+    color: #e5e7eb !important; /* Gray 200 equivalent on dark */
+  }
+
+  .bg-neutral-900 .text-neutral-450, .bg-neutral-900 .text-stone-450, .bg-neutral-950 .text-neutral-450, .bg-neutral-950 .text-stone-450 {
+    color: #d1d5db !important;
+  }
+
+  .bg-neutral-900 .text-neutral-400, .bg-neutral-900 .text-stone-400, .bg-neutral-900 .text-gray-400, .bg-neutral-900 .text-zinc-400,
+  .bg-neutral-950 .text-neutral-400, .bg-neutral-950 .text-stone-400, .bg-neutral-950 .text-gray-400, .bg-neutral-950 .text-zinc-400,
+  .bg-stone-900 .text-neutral-400, .bg-stone-900 .text-stone-400, .bg-stone-900 .text-gray-400, .bg-stone-950 .text-stone-400,
+  .bg-black .text-neutral-400, .bg-black .text-stone-400, .bg-black .text-gray-400 {
+    color: #cbd5e1 !important; /* Light Slate 300 equivalent on dark */
+  }
+
+  .bg-neutral-900 .text-neutral-300, .bg-neutral-900 .text-stone-300, .bg-neutral-900 .text-gray-300, .bg-neutral-900 .text-zinc-300,
+  .bg-neutral-950 .text-neutral-300, .bg-neutral-950 .text-stone-300, .bg-neutral-950 .text-gray-300, .bg-neutral-950 .text-zinc-300,
+  .bg-stone-900 .text-neutral-300, .bg-stone-900 .text-stone-300, .bg-stone-900 .text-gray-300, .bg-stone-950 .text-stone-300,
+  .bg-black .text-neutral-300, .bg-black .text-stone-300, .bg-black .text-gray-300 {
+    color: #f3f4f6 !important; /* Crisp Gray 100 on dark */
+  }
+
+  /* --- Sleek & Balanced Sitewide Font Size Scaling to Keep Elements Legible but Compact --- */
+  .text-\[8px\] {
+    font-size: 9.5px !important;
+    letter-spacing: 0.04em;
+  }
+  .text-\[9px\] {
+    font-size: 10.5px !important;
+    letter-spacing: 0.02em;
+  }
+  .text-\[10px\] {
+    font-size: 11.5px !important;
+    letter-spacing: 0.01em;
+  }
+  .text-\[11px\] {
+    font-size: 12.2px !important;
+  }
+  .text-xs {
+    font-size: 12.8px !important;
+  }
+  .text-sm {
+    font-size: 13.8px !important;
+    line-height: 1.52 !important;
+  }
+  .text-base {
+    font-size: 15.2px !important;
+  }
+}
